@@ -10,3 +10,8 @@ googology（大数学）是研究如何构造尽可能大的自然数的学科�
 
 `MadoreOCF.v` 、`BuchholzOCF.v` 定义与OCF对应的一些递归序数记号
 
+`GH.v` 证明FGH和HH的换算，以及其它一些简单性质
+
+`OrdArith.v` 证明序数运算的一些性质
+
+`Eps0NormalForm.v` 给出了 $\epsilon_0$ 以内的序数的一种表示方式

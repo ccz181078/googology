@@ -119,7 +119,7 @@ Compute (List (f 2) 4).
 Compute (List (f 3) 2).
 Compute (List (f ω) 2).
 
-Compute (List (h 0) 4).
+Compute (List (h 0) 4). 
 Compute (List (h 1) 4).
 Compute (List (h 2) 4).
 Compute (List (h 3) 4).
@@ -177,6 +177,12 @@ End CheckEq.
 Definition ωpow := opower ω.
 
 
+(* 定义序数连续取基本列 *)
+Fixpoint FSs(a:On)(n:list nat):On :=
+match n with
+| nil => a
+| cons h t => FS (FSs a t) h
+end.
 
 
 (* 辅助化简 *)
