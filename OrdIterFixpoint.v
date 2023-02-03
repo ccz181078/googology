@@ -9,8 +9,8 @@ Definition iter_lim(f:On->On)(x:On):On := Lim (fun n=>iter f n x).
 (* f(0,x), f(1,x), ... 的极限 *)
 Definition seq_lim(f:nat->On->On)(x:On):On := Lim (fun n=>f n x).
 
-(* oiter_Suc(f,0), oiter_Suc(f,1), oiter_Suc(f,2), ... 可以用于枚举f(1), f(f(1)+1), f(f(f(1)+1)+1)... *)
-Definition oiter_Suc(f:On->On)(x:On):On := oiter (f 1) (fun a=>(f (Suc a))) x.
+(* oiter_Suc(f,0), oiter_Suc(f,1), oiter_Suc(f,2), ... 可以用于枚举f(0), f(f(0)+1), f(f(f(0)+1)+1)... *)
+Definition oiter_Suc(f:On->On)(x:On):On := oiter (f 0) (fun a=>(f (Suc a))) x.
 
 
 

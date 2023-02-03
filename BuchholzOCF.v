@@ -194,12 +194,12 @@ Inductive On'{X:Set}{cf:X->Set} : Set :=
 | LimΩ (g:X->On').
 
 (* 递推地给出cf(x)>ω时的cf(x) *)
-Definition cf0(x:On):Set := True.
+Definition cf0(x:On):Set := unit.
 Definition cf'{X:Set}{cf:X->Set}(x:@On' X cf): Set :=
 match x with
 | LimX x f0 => cf x
 | LimΩ f0 => X
-| _ => True
+| _ => unit
 end.
 
 (* 将小的序数类型嵌入大的序数类型 *)
@@ -248,9 +248,9 @@ induction x.
 - apply (Limω (omult' IHx)).
 - apply (Limω H).
 - destruct x eqn:E.
-  + apply (H I). (* 不可达 *)
-  + apply (H I). (* 不可达 *)
-  + apply (H I). (* 不可达 *)
+  + apply (H tt). (* 不可达 *)
+  + apply (H tt). (* 不可达 *)
+  + apply (H tt). (* 不可达 *)
   + apply (@LimX X cf x0 H).
   + apply (@LimΩ X cf H).
 - apply (Limω (fun m=>(iter H m Zero'))).
