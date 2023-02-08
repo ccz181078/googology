@@ -15,3 +15,5 @@ googology（大数学）是研究如何构造尽可能大的自然数的学科�
 `OrdArith.v` 证明序数运算的一些性质
 
 `Eps0NormalForm.v` 给出了 $\epsilon_0$ 以内的序数的一种表示方式
+
+`EBO_NF.v` 给出了 Extended Weak Buchholz's OCF 对应的一种序数记号（缺少停机证明）
